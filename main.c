@@ -4,7 +4,7 @@ int
 main(int argc, char *argv[])
 {
   while(1){
-    printf("no\n");
+    printf("n\n");
   }
   return 0;
 }

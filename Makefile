@@ -1,11 +1,14 @@
-INSTALL_DIR=/usr/bin
-BINARY=no
+BIN_DIR = /usr/bin
+TARGET = no
+CXX = gcc
+SRCS = main.c
+INSTALL = /usr/bin/install -c -D
 
 all: build
 
-build: main.c
-	gcc main.c -o no
+build: ${SRCS}
+	${CXX} ${SRCS} -o ${TARGET}
 
 install: build
-	mv ${BINARY} ${INSTALL_DIR}
+	${INSTALL} ${TARGET} ${BIN_DIR}/${TARGET}
 

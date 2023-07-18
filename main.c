@@ -9,6 +9,7 @@ enum
 
 #define WHITESPACE " "
 #define NEWLINE    "\n"
+#define NO         "n"
 
 static void
 print_args (int   argc,
@@ -45,7 +46,8 @@ main(int   argc,
 
   while (TRUE)
    {
-     printf ("n\n");
+     write (0, NO, 1);
+     write (0, NEWLINE, 1);
    }
 
   return 0;

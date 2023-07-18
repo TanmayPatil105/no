@@ -1,11 +1,53 @@
 #include <stdio.h>
+#include <unistd.h>
+
+enum
+{
+  FALSE = 0,
+  TRUE = 1
+};
+
+#define WHITESPACE " "
+#define NEWLINE    "\n"
+
+static void
+print_args (int   argc,
+	    char *argv[])
+{
+  while (TRUE)
+    {
+      for (int i = 1; i < argc; i++)
+        {
+	  int length = 0;
+
+	  while (argv[i][length] != '\0')
+            {
+	      length += 1;
+	    }
+
+          write (0, argv[i], length);
+	  write (0, WHITESPACE, 1);
+	}
+
+      write (0, NEWLINE, 1);
+    }
+};
 
 int
-main(int argc, char *argv[])
+main(int   argc,
+     char *argv[])
 {
-  while(1){
-    printf("n\n");
-  }
+  if (argc > 1)
+    {
+      print_args (argc, argv);
+      return 0;
+    }
+
+  while (TRUE)
+   {
+     printf ("n\n");
+   }
+
   return 0;
 }
 

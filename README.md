@@ -28,6 +28,11 @@ TBD
 TBD
 ```
 
+### On MacOS (brew)
+```bash
+brew install TanmayPatil105/tap/no
+```
+
 ### From Source
 ```bash
 make install

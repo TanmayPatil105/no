@@ -37,3 +37,7 @@ brew install TanmayPatil105/tap/no
 ```bash
 make install
 ```
+
+## LICENSE
+
+[WTFPL](http://www.wtfpl.net/)

@@ -1,0 +1,20 @@
+name: no-package
+base: core20
+version: '9.0'
+summary: No no no
+description: |
+  No No NO
+
+grade: devel
+confinement: strict
+
+apps:
+  no-package:
+    command: "no"
+
+parts:
+  no-package:
+    plugin: dump 
+    source: .
+    organize:
+      no-package: bin/no
